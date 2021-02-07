@@ -3,4 +3,4 @@ world-name: "world_nether"
 # the minimum y level that players are allowed to run the command
 allowed-y-level: 127
 
-stuck-msg: "&cIf you are stuck on the roof, type /stuck to teleport back down"
+unstuck-msg: "&6You are now unstuck"

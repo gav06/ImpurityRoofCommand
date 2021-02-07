@@ -1,7 +1,6 @@
 package me.gavin.impurityroofpatch;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -19,10 +18,11 @@ public class StuckCMD implements CommandExecutor {
 
                     // horrible monkey code
                     for (int i = Main.getPlugin().getConfig().getInt("allowed-y-level"); i > 0; i--) {
-                        System.out.println(i);
+                        //System.out.println(i);
                         if (p.getWorld().getBlockAt(p.getLocation().getBlockX(), i, p.getLocation().getBlockZ()).getType() == Material.AIR
                         && p.getWorld().getBlockAt(p.getLocation().getBlockX(), i - 1, p.getLocation().getBlockZ()).getType() != Material.AIR) {
                             p.teleport(p.getLocation().subtract(0, p.getLocation().getY() - i, 0));
+                            p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.getPlugin().getConfig().getString("unstuck-msg")));
                             break;
                         }
                     }
