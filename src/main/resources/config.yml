@@ -4,3 +4,8 @@ world-name: "world_nether"
 allowed-y-level: 127
 
 unstuck-msg: "&6You are now unstuck"
+
+# mode for patch
+# 1 = run teleport on player move
+# 2 = run teleport on /stuck command
+mode: 1
