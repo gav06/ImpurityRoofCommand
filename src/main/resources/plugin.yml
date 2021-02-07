@@ -1,0 +1,7 @@
+name: ImpurityRoofPatch
+version: ${project.version}
+main: me.gavin.impurityroofpatch.Main
+authors: [ Gav06 ]
+
+commands:
+  stuck:
