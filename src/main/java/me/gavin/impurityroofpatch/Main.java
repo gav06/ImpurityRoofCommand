@@ -9,6 +9,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        this.saveDefaultConfig();
         // Plugin startup logic
         if (getConfig().getInt("mode") == 2) {
             this.getCommand("stuck").setExecutor(new StuckCMD());
